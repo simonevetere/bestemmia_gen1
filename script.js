@@ -13,6 +13,23 @@ function combineRandomWords(str1, str2) {
     return `${word1} ${word2}`;
 }
 
+function cambiaimmagine() {
+    // Funzione per cambiare l'immagine
+    let img = document.querySelector("img.center");
+    let images = ["img/1.png", "img/2.png"];
+    let index = 0;
+    let interval = setInterval(function() {
+        img.src = images[index];
+        index = (index + 1) % images.length;
+    }, 100);
+
+    // Ferma il cambiamento dopo 1 secondo
+    setTimeout(function() {
+        clearInterval(interval);
+        img.src = "img/1.png"; // Torna all'immagine originale
+    }, 1500);
+}
+
 var output 	=	document.getElementById("output");
 
 var seed	=	"Dio Madonna Padre Prete Gesù Spirito Santo Papa Vescovo Diacono Cardinale Monaco Suora Santo Beato Profeta Angelo Arcangelo Martire Abate Missionario Apostolo Diacono Catechista Confessore Eremita Esorcista Evangelista Frate Giudice Levita Missionario Nunzio Ordinato Parroco Patriarca Pellegrino Predicatore Professore Rabbino Sacerdote Sacrista Samaritano Scriba Servo di Dio Teologo Vicario Zelota Abate Abbadessa Acolito Anacoreta Arcidiacono Arcivescovo Canonico Cappellano Cardinale Chierico Diacono permanente Esorcista Fratello laico Guardiano Ieromonaco Liturgista Metropolita Monaca Novizio Oblato Ordinario Pastore Priore";
@@ -28,14 +45,17 @@ button.addEventListener("click", function(event){
 	var msg = new SpeechSynthesisUtterance(text);
 	window.speechSynthesis.speak(msg);
 	output.textContent	=	text;
+	cambiaimmagine();
 }, false);
 
 output.addEventListener("click", function(event){
-	if(text){
-		speechSynthesis.cancel();
-		var msg = new SpeechSynthesisUtterance(text);
-		window.speechSynthesis.speak(msg);
-  }
+    if(text){
+        speechSynthesis.cancel();
+        var msg = new SpeechSynthesisUtterance(text);
+        window.speechSynthesis.speak(msg);
+    }
+
+    cambiaimmagine();
 });
 
 var text   =  combineRandomWords(seed, next);

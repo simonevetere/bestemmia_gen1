@@ -3,7 +3,7 @@
 
 #output, #button{
   position: relative;
-  top: 50%;
+  top: 1%;
   transform: translateY(-50%);
   width: 100%;
   text-align: center;
@@ -21,7 +21,7 @@
 #button{
   font-family: 'Open Sans', sans-serif;
   font-style: italic;
-  margin-top: -8px;
+  margin-top: 8px;
 }
 
 #button:hover, #output:hover{
@@ -33,4 +33,57 @@ html, body{
   height: 100%;
   margin: 0;
   background-color: #F5F5F5;
+}
+
+.center {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+@media (max-width: 992px) {
+  #output {
+    font-size: 5em;
+    margin-top: 5%;
+  }  
+  #button {
+    font-size: 4em;
+    margin-top: 5%;
+  }
+  .center {
+    margin-top: 20%;
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+ #output {
+    font-size: 5em;
+    margin-top: 5%;
+  }  
+  #button {
+    font-size: 4em;
+    margin-top: 5%;
+  }
+  .center {
+    margin-top: 20%;
+    width: 70%;
+  }
+}
+
+@media (max-width: 576px) {
+ #output {
+    font-size: 5em;
+    margin-top: 5%;
+  }  
+  #button {
+    font-size: 4em;
+    margin-top: 5%;
+  }
+  .center {
+    margin-top: 20%;
+    width: 70%;
+  }
 }
