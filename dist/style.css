@@ -1,0 +1,36 @@
+@import url(https://fonts.googleapis.com/css?family=Lora:700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700);
+
+#output, #button{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  color: #414141;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+#output{
+  font-size: 2.0em;
+  line-height: 1em;
+  font-family: 'Lora', serif;
+}
+
+#button{
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  margin-top: -8px;
+}
+
+#button:hover, #output:hover{
+  color: #00ECEC;
+}
+
+html, body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #F5F5F5;
+}
